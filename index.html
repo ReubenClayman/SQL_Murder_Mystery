@@ -1,9 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
-</html>
+SELECT * FROM crime_scene_report WHERE type = 'murder' AND city = 'SQL City' AND
+date = '20180115' Select * from person where address_street_name = 'Northwestern
+Dr' ORDER BY address_number DESC Select * from person where address_street_name
+= 'Franklin Ave' And name LIKE '%ann%' Select * from interview where person_id
+in (14887,16371) Select * from get_fit_now_check_in where membership_id LIKE
+'%48Z%' and check_in_date = 20180109 Select * from get_fit_now_member where id =
+'48Z7A' and membership_status = 'gold' SELECT * FROM drivers_license as dl INNER
+JOIN person as p on dl.id = p.license_id where p.id in (67318,28819) and
+plate_number LIKE '%H42W%' SELECT * FROM drivers_license as dl INNER JOIN person
+as p on dl.id = p.license_id where p.id in (67318,28819) and plate_number LIKE
+'%H42W%' SELECT * FROM interview where person_id = 67318 SELECT dl.*,P.* FROM
+drivers_license as dl INNER JOIN person as p on dl.id = p.license_id where
+dl.hair_color = 'red' and dl.height <=67 and dl.height >=65 and dl.gender =
+'female' and dl.car_make = 'Tesla' SELECT fe.*,p.name FROM
+facebook_event_checkin as fe inner join person as p on p.id= fe.person_id where
+event_name = 'SQL Symphony Concert' and person_id in (78881,90700,99716)
